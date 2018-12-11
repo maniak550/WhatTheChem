@@ -16,7 +16,9 @@ $(document).ready(function(){
           $(".go-icon").removeClass("go-in");
         }
     });
+
     $(".go-icon").click(function(){
+
       let checkFill=false;
       if (checkFill=true)
       {
@@ -30,6 +32,7 @@ $(document).ready(function(){
     });
     
 });
+
 //<input type="text" placeholder="Search" id="search" autocomplete="off">
 
 //let url = 'https://api.wolframalpha.com/v2/query?appid=65EKRV-94YKPAKXQX&input=';

@@ -1,6 +1,6 @@
 html, body {
   font-family: 'Montserrat Alternates', sans-serif;
-  color: #FFFFFF;
+  color: rgb(0, 0, 0);
   width: 100%;
   max-width: 100%;
   height: 100%;
@@ -58,7 +58,7 @@ h1 {
 }
 h2 {
   display: block;
-  margin: 0 auto 60px auto;
+  margin: 0 auto 10px auto;
   text-align: center;
   font-weight: 400;
   font-size: 1.25em;
@@ -158,7 +158,7 @@ h2 {
 }
 .border {
   fill: none;
-  stroke: #FFFFFF;
+  stroke: rgb(0, 0, 0);
   stroke-width: 5;
   stroke-miterlimit: 10;
 }
@@ -189,15 +189,15 @@ h2 {
   border: none;
   background: rgba(255,255,255,0);
   padding: 0 68px 0 68px;
-  color: #FFFFFF;
+  color: rgb(0, 0, 0);
   font-size: 1.32em;
   font-weight: 400;
   letter-spacing: -0.015em;
   outline: none;
 }
-#search::-webkit-input-placeholder {color: #FFFFFF;}
-#search::-moz-placeholder {color: #FFFFFF;}
-#search:-ms-input-placeholder {color: #FFFFFF;}
-#search:-moz-placeholder {color: #FFFFFF;}
-#search::-moz-selection {color: #FFFFFF; background: rgba(0,0,0,0.25);}
-#search::selection {color: #FFFFFF; background: rgba(0,0,0,0.25);}
+#search::-webkit-input-placeholder {color: #000000;}
+#search::-moz-placeholder {color: #000000;}
+#search:-ms-input-placeholder {color: #000000;}
+#search:-moz-placeholder {color: #000000;}
+#search::-moz-selection {color: #000000; background: rgba(255, 255, 255, 0.25);}
+#search::selection {color: #000000; background: rgba(255, 255, 255, 0.25);}
