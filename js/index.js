@@ -18,35 +18,36 @@ $(document).ready(function(){
     });
 
     $(".go-icon").click(function(){
-
-      let checkFill=false;
-      if (checkFill=true)
-      {
-        $("div.results").remove();
-        $('main').css("height","100%");
-        test();
-      }
-      else{test()};
-      
-
+      removeDiv();
     });
    
     $("#search").keypress(function(event){
+
       if(event.which==13){
         event.preventDefault();
-        $("#search").blur();
-        test();
+        $("#search").focus();
+        removeDiv();
       }
     })
 });
-
+function removeDiv()
+  {
+  let checkFill=false;
+  if (checkFill=true)
+  {
+    $("div.results").remove();
+    $('main').css("height","100%");
+    dataFetch();
+  }
+  else{dataFetch()};
+}
 //<input type="text" placeholder="Search" id="search" autocomplete="off">
 
 //let url = 'https://api.wolframalpha.com/v2/query?appid=65EKRV-94YKPAKXQX&input=';
 //let result2 = $("#search").val();
 //let endOfTheLine = '&output=json'
 
-function test() {
+function dataFetch() {
       let proxyUrl = "https://cors-anywhere.herokuapp.com/"
       let url = 'https://api.wolframalpha.com/v2/query?appid=65EKRV-94YKPAKXQX&input=';
       let result2 = $("#search").val();
