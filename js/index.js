@@ -25,8 +25,8 @@ $(document).ready(function(){
 
       if(event.which==13){
         event.preventDefault();
-        $("#search").focus();
         removeDiv();
+        $("document").focus();
       }
     })
 });
