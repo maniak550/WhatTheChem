@@ -32,12 +32,12 @@ $(document).ready(function(){
 });
 //<input type="text" placeholder="Search" id="search" autocomplete="off">
 
-//let url = 'http://api.wolframalpha.com/v2/query?appid=65EKRV-94YKPAKXQX&input=';
+//let url = 'https://api.wolframalpha.com/v2/query?appid=65EKRV-94YKPAKXQX&input=';
 //let result2 = $("#search").val();
 //let endOfTheLine = '&output=json'
 
 function test() {
-      let url = 'http://api.wolframalpha.com/v2/query?appid=65EKRV-94YKPAKXQX&input=';
+      let url = 'https://api.wolframalpha.com/v2/query?appid=65EKRV-94YKPAKXQX&input=';
       let result2 = $("#search").val();
       let endOfTheLine = '&output=json';
 fetch(url+result2+endOfTheLine,
