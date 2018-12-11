@@ -30,9 +30,14 @@ $(document).ready(function(){
       }
     })
 });
+function hideKeyboard() { document.activeElement.blur();
+	$("input").blur();
+};
+
+
 function removeDiv()
   {
-  $("#search").blur();
+  hideKeyboard();
   let checkFill=false;
   if (checkFill=true)
   {
