@@ -37,10 +37,11 @@ $(document).ready(function(){
 //let endOfTheLine = '&output=json'
 
 function test() {
+      let proxyUrl = "https://cors-anywhere.herokuapp.com/"
       let url = 'https://api.wolframalpha.com/v2/query?appid=65EKRV-94YKPAKXQX&input=';
       let result2 = $("#search").val();
       let endOfTheLine = '&output=json';
-fetch(url+result2+endOfTheLine,
+fetch(proxyUrl+url+result2+endOfTheLine,
   {
     method: "GET",
     mode: 'cors',  
