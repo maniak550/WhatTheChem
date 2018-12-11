@@ -28,9 +28,15 @@ $(document).ready(function(){
       }
       else{test()};
       
-      //$(".search-form").submit()
+
     });
-    
+   
+    $("#search").keypress(function(event){
+      if(event.which==13){
+        event.preventDefault();
+        test();
+      }
+    })
 });
 
 //<input type="text" placeholder="Search" id="search" autocomplete="off">
@@ -69,16 +75,7 @@ fetch(proxyUrl+url+result2+endOfTheLine,
     document.getElementById('results').innerHTML=`
     <h1 class="app-config">Results:(${data.queryresult.numpods})</h1>
     `
-    /*$(document).ready(function(){
-      var divsToAppend="";
-      for(i=0;i<data.queryresult.numpods;i++)
-        {
 
-          divsToAppend+='<div id="div'+(i)+'">+$(data.queryresult.pods.+(i)+</div>';
-          //divsToAppend+='<div id="div'+(i)+'">Title of div: ${data.queryresult.pods.i}</div>';
-        }
-      $('body').append(divsToAppend);
-    });*/
   $(document).ready(function(){
     
     let out='';
