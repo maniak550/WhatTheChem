@@ -22,7 +22,7 @@ $(document).ready(function(){
     });
    
     $("#search").keypress(function(event){
-
+      $("#search").focus;
       if(event.which==13){
         event.preventDefault();
         removeDiv();
