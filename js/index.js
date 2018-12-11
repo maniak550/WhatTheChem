@@ -26,12 +26,13 @@ $(document).ready(function(){
       if(event.which==13){
         event.preventDefault();
         removeDiv();
-        $("#main").focus();
+        
       }
     })
 });
 function removeDiv()
   {
+  $("#main").focus();
   let checkFill=false;
   if (checkFill=true)
   {
