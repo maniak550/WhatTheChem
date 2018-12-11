@@ -32,7 +32,7 @@ $(document).ready(function(){
 });
 function removeDiv()
   {
-  $("document").focus();
+  $("#search").blur();
   let checkFill=false;
   if (checkFill=true)
   {
