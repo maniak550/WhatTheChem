@@ -26,7 +26,7 @@ $(document).ready(function(){
       if(event.which==13){
         event.preventDefault();
         removeDiv();
-        $("document").focus();
+        $("main").focus();
       }
     })
 });
