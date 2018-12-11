@@ -32,7 +32,7 @@ $(document).ready(function(){
 });
 function removeDiv()
   {
-  $("#main").focus();
+  $("document").focus();
   let checkFill=false;
   if (checkFill=true)
   {
