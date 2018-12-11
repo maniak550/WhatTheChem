@@ -34,7 +34,7 @@ $(document).ready(function(){
     $("#search").keypress(function(event){
       if(event.which==13){
         event.preventDefault();
-        $("search").blur()
+        $("#search").blur();
         test();
       }
     })
@@ -64,7 +64,7 @@ fetch(proxyUrl+url+result2+endOfTheLine,
     return response.json();
   })
   .then(function(myJson) {
-    //document.getElementById('results').innerHTML=JSON.stringify(myJson);
+    
  
     data=(JSON.parse(JSON.stringify(myJson)));
 
