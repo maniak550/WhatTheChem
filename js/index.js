@@ -90,6 +90,7 @@ fetch(proxyUrl+url+result2+endOfTheLine,
   $(document).ready(function(){
     $(".se-pre-con").fadeOut();
     let out='';
+     out+='<hr width="75%">';
     for(i=0;i<data.queryresult.numpods;i++)
     {
       out+='<div class="results" id="div'+(i)+'">';
@@ -98,7 +99,8 @@ fetch(proxyUrl+url+result2+endOfTheLine,
       out+='</div>'
     };
    
-    $(out).appendTo('.test');
+    $(out).appendTo('.test')
+    
     // $(function() {
     //   $('.results').slideDown(300).delay(900).fadeIn(400);
     //   console.log('dziala');

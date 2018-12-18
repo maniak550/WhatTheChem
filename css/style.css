@@ -59,7 +59,7 @@ h1 {
 }
 h2 {
   display: block;
-  margin: 0 auto 10px auto;
+  margin: 30px auto 10px auto;
   text-align: center;
   font-weight: 400;
   font-size: 1.25em;
@@ -207,6 +207,25 @@ h2 {
 	z-index: 9999;
   background: url(images/loader-64x/Preloader_2.gif) center no-repeat;
   mix-blend-mode: multiply;
+}
+
+.results:first-child
+{
+  margin-top: 100px;
+  
+
+}
+.results
+{
+  margin-top: 10px;
+}
+hr
+{
+  margin-top:100px;
+  text-align: center;
+  height: 1px solid grey;
+  margin-left: auto;
+  margin-right: auto;
 }
 #search::-webkit-input-placeholder {color: #000000;}
 #search::-moz-placeholder {color: #000000;}
