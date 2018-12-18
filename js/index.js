@@ -20,7 +20,7 @@ $(document).ready(function(){
     $(".go-icon").click(function(){
       removeDiv();
     });
-   
+    $(".se-pre-con").hide();
     $("#search").keypress(function(event){
       $("#search").focus;
       if(event.which==13){
@@ -37,15 +37,20 @@ function hideKeyboard() { document.activeElement.blur();
 
 function removeDiv()
   {
+  
   hideKeyboard();
   let checkFill=false;
   if (checkFill=true)
   {
     $("div.results").remove();
     $('main').css("height","100%");
+    $(".se-pre-con").show();
+    
+      
     dataFetch();
   }
-  else{dataFetch()};
+  else{dataFetch();
+    $(".se-pre-con").show();};
 }
 //<input type="text" placeholder="Search" id="search" autocomplete="off">
 
@@ -58,6 +63,7 @@ function dataFetch() {
       let url = 'https://api.wolframalpha.com/v2/query?appid=65EKRV-94YKPAKXQX&input=';
       let result2 = $("#search").val();
       let endOfTheLine = '&output=json';
+      
 fetch(proxyUrl+url+result2+endOfTheLine,
   {
     method: "GET",
@@ -66,6 +72,7 @@ fetch(proxyUrl+url+result2+endOfTheLine,
     
     }
   }
+  
 )
   .then(function(response) {
     return response.json();
@@ -77,15 +84,11 @@ fetch(proxyUrl+url+result2+endOfTheLine,
 
     console.log(data.queryresult);
    
-
-    
-    
-    document.getElementById('results').innerHTML=`
-    <h1 class="app-config">Results:(${data.queryresult.numpods})</h1>
-    `
-
+    // document.getElementById('results').innerHTML=`
+    // <h1 class="app-config">Results:(${data.queryresult.numpods})</h1>
+    // `
   $(document).ready(function(){
-    
+    $(".se-pre-con").fadeOut();
     let out='';
     for(i=0;i<data.queryresult.numpods;i++)
     {
@@ -93,13 +96,20 @@ fetch(proxyUrl+url+result2+endOfTheLine,
       out+='<h2>'+data.queryresult.pods[i].title+'</h2>'
       out+='<p>'+'<img src='+data.queryresult.pods[i].subpods[0].img.src+' '+ 'class="center"'+'>'+'</p>';
       out+='</div>'
-    }
-    
-    $('main').append(out);
+    };
+   
+    $(out).appendTo('.test');
+    // $(function() {
+    //   $('.results').slideDown(300).delay(900).fadeIn(400);
+    //   console.log('dziala');
+
+    // });  
+  
     $('main').removeClass("height");
     $('main').addClass("height");
     $('main').css("height","auto");
     let checkFill=true;
+
 
   })
     
