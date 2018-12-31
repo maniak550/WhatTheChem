@@ -202,8 +202,8 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 	top: 20px;
-	width: 15%;
-	height: 15%;
+	width: 30%;
+	height: 30%;
 	z-index: 9999;
   background: url(images/loader-64x/Preloader_2.gif) center no-repeat;
   mix-blend-mode: multiply;
@@ -211,21 +211,27 @@ h2 {
 
 .results:first-child
 {
-  margin-top: 100px;
+  margin-top: 5%;
   
 
 }
 .results
 {
-  margin-top: 10px;
+  margin-top: 1%;
+  
 }
 hr
 {
-  margin-top:100px;
+  margin-top:10%;
   text-align: center;
   height: 1px solid grey;
   margin-left: auto;
   margin-right: auto;
+}
+.img
+{
+
+  
 }
 #search::-webkit-input-placeholder {color: #000000;}
 #search::-moz-placeholder {color: #000000;}
