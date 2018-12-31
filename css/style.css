@@ -211,7 +211,7 @@ h2 {
 
 .results:first-child
 {
-  margin-top: 5%;
+  margin-top: 1%;
   
 
 }
@@ -222,7 +222,7 @@ h2 {
 }
 hr
 {
-  margin-top:10%;
+  margin-top:5%;
   text-align: center;
   height: 1px solid grey;
   margin-left: auto;
