@@ -46,7 +46,7 @@ main {
  background: #EFEFBB;  /* fallback for old browsers */
  background: -webkit-linear-gradient(to bottom, #D4D3DD, #EFEFBB);  /* Chrome 10-25, Safari 5.1-6 */
  background: linear-gradient(to bottom, #D4D3DD, #EFEFBB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
- 
+
 }
 
 h1 {
@@ -64,6 +64,16 @@ h2 {
   font-weight: 400;
   font-size: 1.25em;
   letter-spacing: -0.015em;
+
+}
+
+p {
+
+  text-align: center;
+  font-size: 16px;
+  font-weight: 200;
+  margin-top: 0px;
+  margin-bottom: 5px;
 }
 .center {
   display: block;
@@ -72,8 +82,8 @@ h2 {
   max-width:100%;
   height:auto;
   mix-blend-mode: multiply;
-  
-  
+
+
 }
 .container {
   position: relative;
@@ -212,13 +222,13 @@ h2 {
 .results:first-child
 {
   margin-top: 1%;
-  
+
 
 }
 .results
 {
   margin-top: 1%;
-  
+
 }
 hr
 {
@@ -231,7 +241,7 @@ hr
 .img
 {
 
-  
+
 }
 #search::-webkit-input-placeholder {color: #000000;}
 #search::-moz-placeholder {color: #000000;}
@@ -239,3 +249,16 @@ hr
 #search:-moz-placeholder {color: #000000;}
 #search::-moz-selection {color: #000000; background: rgba(255, 255, 255, 0.25);}
 #search::selection {color: #000000; background: rgba(255, 255, 255, 0.25);}
+
+#helper p {
+  opacity: 0;
+  font-size: 21px;
+  margin-top: 15px;
+  text-align: center;
+}
+#sources a {
+  opacity: 0;
+  font-size: 11px;
+  margin-top: 25px;
+  text-align: center;
+}
