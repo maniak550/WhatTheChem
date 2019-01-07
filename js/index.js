@@ -1,4 +1,6 @@
+
 let checkFill = false;
+let mySearch='';
 $(document).ready(function () {
   $("#search").focus(function () {
     $(".search-box").addClass("border-searching");
@@ -15,7 +17,8 @@ $(document).ready(function () {
       $(".go-icon").removeClass("go-in");
     }
   });
-  $("#helper p").delay(3000).animate({"opacity": "1"}, 1400);
+  $("#helper p,ul,h2").delay(3000).animate({"opacity": "1"}, 1400);
+  $("#helper ").delay(3000).animate({"opacity": "1"}, 1400);
   $("#sources a").delay(3000).animate({"opacity": "0.7"}, 1400);
   $('main').css("height", "auto");
   $(".go-icon").click(function () {
@@ -32,12 +35,23 @@ $(document).ready(function () {
     }
   })
 });
+var wybrane='';
+$('a').click(function(){
+  wybrane=$(this).html().split(':').pop();
+  console.log(wybrane);
+  $("#search").val(wybrane);
+  removeDiv();
+  hideKeyboard();
+});
+
 
 function hideKeyboard() {
   document.activeElement.blur();
   $("input").blur();
 };
-
+$('#logo').click(function(){
+  location.reload();
+});
 
 function removeDiv() {
 
@@ -131,13 +145,13 @@ function dataFetch() {
 
       console.log(data.queryresult);
 
-
-      if (data.queryresult.success == false||!data.queryresult.datatypes.includes("Chemical")){
-        displayError();
-      };
-
-      if (data.queryresult.success == true&&data.queryresult.datatypes.includes("Chemical")) {
+      if (data.queryresult.success == true&&data.queryresult.datatypes.includes("Chemical")||data.queryresult.datatypes.includes("Element")||data.queryresult.assumptions.type.includes("Clash")) {
         displayResults();
-      };
+      }
+
+      else if (data.queryresult.success == false||!data.queryresult.datatypes.includes("Chemical")){
+        displayError();
+      }
+
     })
 }

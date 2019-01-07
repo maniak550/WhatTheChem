@@ -218,7 +218,10 @@ p {
   background: url(images/loader-64x/Preloader_2.gif) center no-repeat;
   mix-blend-mode: multiply;
 }
-
+#loader h3{
+  font-size: 1em
+  width: 100%;
+}
 .results:first-child
 {
   margin-top: 1%;
@@ -232,7 +235,7 @@ p {
 }
 hr
 {
-  margin-top:5%;
+  margin-top:2%;
   text-align: center;
   height: 1px solid grey;
   margin-left: auto;
@@ -240,7 +243,7 @@ hr
 }
 .img
 {
-
+margin-bottom: 2%
 
 }
 #search::-webkit-input-placeholder {color: #000000;}
@@ -256,9 +259,61 @@ hr
   margin-top: 15px;
   text-align: center;
 }
-#sources a {
+#sources  a {
   opacity: 0;
   font-size: 11px;
-  margin-top: 25px;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  margin-bottom: 10px;
+  margin-top:10px;
+}
+#helper ul{
+  opacity: 0;
+}
+#helper h2{
+  opacity:0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-block-end: 20px;
+}
+
+li {
+  font: 200 15px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+li:last-child {
+  border: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #000;
   text-align: center;
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+  display: block;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 10%;
+
+}
+
+li a:hover {
+  font-size: 16px;
+  background:inherit;
+  font: italic bold
+}
+li a:focus{
+  font-size: 16px;
+  background:inherit;
+  font: italic bold
 }
