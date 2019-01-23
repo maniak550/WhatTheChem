@@ -17,9 +17,9 @@ $(document).ready(function () {
       $(".go-icon").removeClass("go-in");
     }
   });
-  $("#helper p,ul,h2").delay(3000).animate({"opacity": "1"}, 1400);
-  $("#helper ").delay(3000).animate({"opacity": "1"}, 1400);
-  $("#sources a").delay(3000).animate({"opacity": "0.7"}, 1400);
+  $("#helper p,ul,h2").delay(2000).animate({"opacity": "1"}, 1400);
+  $("#helper ").delay(2000).animate({"opacity": "1"}, 1400);
+  $("#sources a").delay(2000).animate({"opacity": "0.7"}, 1400);
   $('main').css("height", "auto");
   $(".go-icon").click(function () {
     removeDiv();
@@ -41,7 +41,6 @@ $('a').click(function(){
   console.log(wybrane);
   $("#search").val(wybrane);
   removeDiv();
-  hideKeyboard();
 });
 
 
@@ -145,7 +144,7 @@ function dataFetch() {
 
       console.log(data.queryresult);
 
-      if (data.queryresult.success == true&&data.queryresult.datatypes.includes("Chemical")||data.queryresult.datatypes.includes("Element")||data.queryresult.assumptions.type.includes("Clash")) {
+      if (data.queryresult.success == true&&data.queryresult.datatypes.includes("Chemical")||data.queryresult.datatypes.includes("Element")||data.queryresult.timedout.includes("Chemical")) {
         displayResults();
       }
 
